@@ -1,0 +1,20 @@
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+body {
+  margin: 10px;
+  height: 500px;
+  background-color: #343a40;
+  /* height: 100%; */
+  width: 100%;
+  display: block;
+}
+.makecenter {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
