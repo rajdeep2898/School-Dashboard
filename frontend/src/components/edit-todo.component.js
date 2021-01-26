@@ -10,7 +10,7 @@ export default class EditTodo extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      id: "",
+      id_number: "",
       name: "",
       email: "",
       task: "",
@@ -29,7 +29,7 @@ export default class EditTodo extends Component {
       .then((response) => {
         console.log(response);
         this.setState({
-          id: response.data.id,
+          id_number: response.data.id_number,
           name: response.data.name,
           email: response.data.email,
           task: response.data.task,
@@ -73,7 +73,7 @@ export default class EditTodo extends Component {
 
     //Create Object
     const obj = {
-      id: this.state.id,
+      id_number: this.state.id_number,
       name: this.state.name,
       email: this.state.email,
       task: this.state.task,
@@ -103,9 +103,9 @@ export default class EditTodo extends Component {
             <label>Id: </label>
             <input
               type='text'
-              name='id'
+              name='id_number'
               className='form-control border-danger'
-              value={this.state.id}
+              value={this.state.id_number}
               onChange={this.onChange}
             />
           </div>

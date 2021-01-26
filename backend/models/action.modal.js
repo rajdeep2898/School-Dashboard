@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var actionSchema = new Schema(
   {
-    id: {
+    id_number: {
       type: Number,
       required: true,
       maxlength: 32,

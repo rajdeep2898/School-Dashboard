@@ -34,7 +34,7 @@ const HomePage = () => {
             </ul>
           </div>
         </nav>
-        <div class='mt-5 jubotron text-center'>
+        <div className='mt-5 jubotron text-center'>
           <div className='col'>
             <div className='row'>
               <div className='col'>

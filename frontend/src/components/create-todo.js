@@ -12,7 +12,7 @@ export default class CreateTodo extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      id: "",
+      id_number: "",
       name: "",
       email: "",
       task: "",
@@ -55,7 +55,7 @@ export default class CreateTodo extends Component {
 
     //Create a new Object
     const newTodo = {
-      id: this.state.id,
+      id_number: this.state.id_number,
       name: this.state.name,
       email: this.state.email,
       task: this.state.task,
@@ -74,7 +74,7 @@ export default class CreateTodo extends Component {
 
     //Reset the State variables
     this.setState({
-      id: "",
+      id_number: "",
       name: "",
       email: "",
       task: "",
@@ -91,9 +91,9 @@ export default class CreateTodo extends Component {
             <label>Id: </label>
             <input
               type='text'
-              name='id'
+              name='id_number'
               className='form-control border-danger'
-              value={this.state.id}
+              value={this.state.id_number}
               onChange={this.onChange}
             />
           </div>

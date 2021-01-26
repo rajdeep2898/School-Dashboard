@@ -88,7 +88,7 @@ export default class TodosList extends Component {
     const todoList = this.state.todos.map((currentTodo) => (
       <tr>
         <td className={currentTodo.todo_completed ? "completed" : ""}>
-          {currentTodo.id}
+          {currentTodo.id_number}
         </td>
         <td className={currentTodo.todo_completed ? "completed" : ""}>
           {currentTodo.name}

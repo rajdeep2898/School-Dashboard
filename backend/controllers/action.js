@@ -1,6 +1,6 @@
 // const User = require("../models/user");
 // const Order = require("../models/order");
-const Action = require("../models/action");
+const Action = require("../models/action.modal");
 
 exports.getActionById = (req, res, next, id) => {
   //   Category.findById(id).exec((err, cate) => {
@@ -35,17 +35,16 @@ exports.createAction = (req, res) => {
 
   data.role = req.id;
   const action = new Action(data);
-  action.save((err, action) => {
-    if (err) {
-      return res.status(400).json({
-        error: "NOT able to save action in DB",
-      });
+  action.save((error, action) => {
+    if (error) {
+      // console.log(error);
+      return res.status(400).json(error);
     }
     res.json({ action });
   });
 };
 exports.getaAction = (req, res) => {
-  console.log(req.action);
+  // console.log(req.action);
   return res.json(req.action);
 };
 exports.getAction = (req, res) => {
@@ -119,8 +118,6 @@ exports.removeAction = (req, res) => {
         error: "Failed to Delete this catagory",
       });
     }
-    res.json({
-      message: "Successfully Deleted",
-    });
+    res.json(action);
   });
 };
